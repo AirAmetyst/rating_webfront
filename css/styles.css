@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+
+}
+
+.bubbles{
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles_at_background{
+    position: relative;
+
+    display: flex;
+}
+
+
+.bubbles_at_background span{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #ce6b85;
+    margin:  0  4px;
+    border-radius: 50%;
+    filter: blur(20px);
+
+    animation: bubbles_rising 15s linear infinite;
+    animation-duration: calc(60s/var(--d));
+
+}
+
+.bubbles_at_background span:nth-child(2n + 2){
+
+    background: #7D3ECE;
+
+
+
+
+}
+
+.bubbles_at_background span:nth-child(3n + 3){
+
+    background: #FDF63C;
+
+
+
+
+}
+
+
+@keyframes bubbles_rising {
+    0%{
+        transform: translateY(100vh);
+    }
+
+    100%{
+        background: white;
+    }
+}
